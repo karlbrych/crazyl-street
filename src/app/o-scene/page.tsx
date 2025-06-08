@@ -1,3 +1,5 @@
+import Mimino from "../components/Mimino";
+
 export default function AboutScene() {
   return (
     <main className="px-6 py-10 text-white max-w-4xl mx-auto space-y-8">
@@ -44,6 +46,7 @@ export default function AboutScene() {
       </p>
 
       <p className="italic text-purple-400 mt-4">— Crazyl</p>
+      <Mimino></Mimino>
     </main>
   );
 }

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { graffitiPosts } from "./utils/posts";
 import GraffitiCard from "./components/GraffitiCard";
+import Mimino from "./components/Mimino";
 
 export default function Home() {
   const latestPosts = graffitiPosts.slice(0, 3);
@@ -46,6 +47,7 @@ export default function Home() {
           Zobrazit celý Crew Feed →
         </Link>
       </div>
+      <Mimino></Mimino>
     </main>
   );
 }

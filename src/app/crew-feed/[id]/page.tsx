@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { graffitiPosts } from "../../utils/posts";
-
+import Image from "next/image";
+import Mimino from "../../components/Mimino";
 interface Post {
   id: number;
   title: string;
@@ -36,6 +37,7 @@ export default function Detail({ params }: Params) {
         <span className="text-2xl mr-2">←</span>
         <span className="underline">Zpět na Crew Feed</span>
       </Link>
+      <Mimino></Mimino>
     </main>
   );
 }

@@ -1,5 +1,6 @@
 import { graffitiPosts } from "../utils/posts";
 import GraffitiCard from "../components/GraffitiCard";
+import Mimino from "../components/Mimino";
 
 export default function CrewFeed() {
   return (
@@ -10,6 +11,7 @@ export default function CrewFeed() {
           <GraffitiCard key={post.id} post={post} />
         ))}
       </div>
+      <Mimino></Mimino>
     </main>
   );
 }
