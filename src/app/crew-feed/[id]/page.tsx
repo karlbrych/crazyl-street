@@ -17,9 +17,9 @@ interface Params {
 }
 
 export default function Detail({ params }: Params) {
-  const post: Post | undefined = graffitiPosts.find(
-    (p: Post) => p.id === parseInt(params.id)
-  );
+  const post = graffitiPosts.find(
+  (p): p is Post => typeof p.content === 'string' && p.id === parseInt(params.id)
+);
 
   if (!post) return notFound();
 
@@ -38,6 +38,33 @@ export default function Detail({ params }: Params) {
         <span className="underline">Zpět na Crew Feed</span>
       </Link>
       <Mimino></Mimino>
+       <div className="overflow-hidden p-8 bg-black">
+      <Image
+        src="/nigger.png"
+        alt="PIXEL GOBLIN CORE VIBE"
+        width={96}
+        height={96}
+          className="relative z-10 
+                   w-24 h-24 
+                   rounded-[40%] 
+                   scale-75 
+                   animate-zoom-freakout 
+                   skew-x-6 skew-y-6 
+                   rotate-[360deg] 
+                   contrast-[300%] brightness-[190%] hue-rotate-[220deg] saturate-[600%] 
+                   border-[5px] border-dashed border-fuchsia-500 
+                   ring-4 ring-cyan-300 ring-offset-2 
+                   shadow-[0_0_40px_10px_rgba(255,0,255,0.8)] 
+                   mix-blend-difference 
+                   transition-all duration-300 ease-in-out 
+                   group-hover:scale-[3] 
+                   group-hover:rotate-[1440deg] 
+                   group-hover:blur-sm 
+                   group-hover:sepia 
+                   motion-safe:animate-glitch"
+                   
+      />
+    </div>
     </main>
   );
 }
